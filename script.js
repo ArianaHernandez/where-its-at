@@ -1,27 +1,58 @@
-/*
-This is your site JavaScript code - you can add interactivity and carry out processing
-- Initially the JS writes a message to the console, and moves a button you can add from the README
-*/
+$(document).ready(function() {
+  $("#userBorough").keypress(function(e) {
+    var key = e.which;
+    if (key == 13) {
+      // the enter key code
+      var borough = $("#userBorough").val();
+      sessionStorage.setItem("borough", borough);
+      $(window).attr(
+        "location",
+        "https://where-its-at.glitch.me/experiences.html"
+      );
+    }
+  });
+  $("#submit").click(function() {
+    var borough = $("#userBorough").val();
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
+    sessionStorage.setItem("borough", borough);
+    $(window).attr(
+      "location",
+      "https://where-its-at.glitch.me/experiences.html"
+    );
+  });
+});
 
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function() {
-    // The JS works in conjunction with the 'dipped' code in style.css
-    btn.classList.toggle("dipped");
-  };
+var borough = sessionStorage.getItem("borough");
+if (borough === "queens" || borough === "Queens") {
+  $("#borough").text("Queens");
+  $(".brooklyn").hide();
+  $(".manhattan").hide();
+  $(".bronx").hide();
+  $(".statenIsland").hide();
+} else if (borough === "Brooklyn" || borough === "brooklyn") {
+  $("#borough").text("Brooklyn");
+  $(".queens").hide();
+  $(".manhattan").hide();
+  $(".bronx").hide();
+  $(".statenIsland").hide();
+} else if (borough === "Staten Island" || borough === "staten island") {
+  $("#borough").text("Staten Island");
+  $(".queens").hide();
+  $(".manhattan").hide();
+  $(".bronx").hide();
+  $(".brooklyn").hide();
+} else if (borough === "Bronx" || borough === "bronx") {
+  $("#borough").text("Bronx");
+  $(".queens").hide();
+  $(".manhattan").hide();
+  $(".statenIsland").hide();
+  $(".brooklyn").hide();
+} else if (borough === "Manhattan" || borough === "manhattan") {
+  $("#borough").text("Manhattan");
+  $(".queens").hide();
+  $(".bronx").hide();
+  $(".statenIsland").hide();
+  $(".brooklyn").hide();
+} else {
+  $("#borough").text("New York");
 }
-
-// This is a single line JS comment
-/*
-This is a comment that can span multiple lines 
-- use comments to make your own notes!
-*/
