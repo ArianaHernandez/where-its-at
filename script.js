@@ -1,6 +1,17 @@
 $(document).ready(function() {
+  $("#userBorough").keypress(function(e) {
+    var key = e.which;
+    if (key == 13) {
+      // the enter key code
+      var borough = $("#userBorough").val();
+      sessionStorage.setItem("borough", borough);
+      $(window).attr(
+        "location",
+        "https://where-its-at.glitch.me/experiences.html"
+      );
+    }
+  });
   $("#submit").click(function() {
-    $("#userBorough").keypress();
     var borough = $("#userBorough").val();
 
     sessionStorage.setItem("borough", borough);

@@ -1,5 +1,0 @@
-   <h1 class="galleryheader">Public Programs</h1>
-       <div id="gallery"></div>
-      <p id="image">Add Your Art <input id="imgurl" size="20"></p>
-        <p>Your name and where your from <input id="name" placeholder="Ex: Sarah from Queens"></p>
-    <button id="add">Add</button>

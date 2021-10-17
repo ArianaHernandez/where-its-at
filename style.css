@@ -41,7 +41,7 @@ END Glitch hello-app default styles
 ******************************************************************************/
 
 body {
-  font-family: HK Grotesk;
+  font-family: "Roboto", sans-serif;
   background: linear-gradient(#F9E900, #ED33B9);
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,7 +64,7 @@ body {
 /* Very light scaling for our illustration */
 .title {
   color: #5158BB;
-  font-family: HK Grotesk;
+  font-family: "Sedgwick Ave Display", cursive;
   font-style: normal;
   font-weight: bold;
   font-size: 80px;
@@ -129,6 +129,7 @@ h2 {
   background-color: #F9E900;
 }
 #left {
+  font-family: "Sedgwick Ave Display", cursive;
   margin-left: 10px;
   display: flex;
   align-items: center;
@@ -161,7 +162,7 @@ a:hover {
 }
 .header {
   color: #5158BB;
-  font-family: HK Grotesk;
+  font-family: "Sedgwick Ave Display", cursive;
   font-style: normal;
   font-weight: bold;
   font-size: 50px;
@@ -175,9 +176,32 @@ a:hover {
 #imgurl {
   margin-left: 45px;
 }
-.experienceImgs{
-  max-width:300px;
+.experienceImgs {
+  max-width: 300px;
 }
-.experiences{
-text-align:center;
+.experiences {
+  text-align: center;
+}
+.donations {
+  color: #5158BB;
+  text-align: center;
+  width: 100vh;
+  height: 75vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.vl {
+  border-left: 3px solid #94C9A9;
+  height: 92%;
+}
+h1,
+h2,
+h3 {
+  color: #5158BB;
+}
+.institutions,
+.supplies,
+.volunteer {
+  color: black;
 }
