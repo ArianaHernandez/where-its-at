@@ -36,7 +36,6 @@ $(document).ready(function() {
   }
 
   $("#add").click(function() {
-    alert("work please");
     var imgUrl = $("#imgurl").val();
     var newname = $("#name").val();
     $("div").empty();
