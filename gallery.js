@@ -38,7 +38,7 @@ $(document).ready(function() {
   $("#add").click(function() {
     var imgUrl = $("#imgurl").val();
     var newname = $("#name").val();
-    $("div").empty();
+    $("#gallery").empty();
     Pictures.push(imgUrl);
     Names.push(newname);
     buildGallery();
